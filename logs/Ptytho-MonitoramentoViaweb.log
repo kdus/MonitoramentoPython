@@ -1,0 +1,428 @@
+[2026-03-30 11:40:43] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on 'netquadras.com.br:3306' (10060 A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond)
+[2026-03-31 01:18:04] [MonitoringController] FALHA ao salvar evento: Evento(id_isep=0021, codigo=1AA6, data_evento=2026-03-31 01:17:24)
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-04-01 17:23:04] [Iniciar] main.py finalizou. ExitCode=0
+[2026-04-01 17:23:11] [Iniciar] Executando main.py...
+[2026-04-01 17:23:11] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-04-01 17:27:09] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-04-02 09:44:01] [Iniciar] main.py finalizou. ExitCode=1
+[2026-04-02 09:44:08] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-04-02 09:45:44] [Iniciar] main.py finalizou. ExitCode=1
+[2026-04-02 09:46:06] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-04-02 09:58:09] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[2026-04-04 02:08:49] [MonitoringController] FALHA ao salvar evento: Evento(id_isep=0021, codigo=1AA6, data_evento=2026-04-04 02:08:30)
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-04-04 18:48:20] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-04-04 19:12:52] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-05-26 08:53:52] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-05-26 17:57:36] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-06-09 09:37:03] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[2026-06-09 14:34:52] [Iniciar] Executando main.py...
+================================================================================
+   VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+   SI Sistemas Inteligentes Eletronicos
+   Versao 1.0 - Escuta continua 24/7 (auto-recovery)
+================================================================================
+
+[Main] OK: Arquivo .env carregado com sucesso
+
+[Main] VIAWEB Receiver: 141.11.72.177:2700
+[Main] Banco de Dados: netquadras.com.br:3306/dbprodtenis
+[Main] Aplicacao: Monitoramento Python
+
+[Main] Modo: servico continuo (auto-recovery). Ctrl+C para encerrar.
+================================================================================
+
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Erro ao conectar no banco: 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a real number is required, not str)
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis
+[DatabaseService] Nao conectado ao banco de dados
+[DatabaseService] Conectado ao banco de dados dbprodtenis

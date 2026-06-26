@@ -1,0 +1,200 @@
+================================================================================
+  VIAWEB RECEIVER - COMO USAR
+  SI Sistemas Inteligentes Eletrônicos
+================================================================================
+
+🚀 INÍCIO RÁPIDO (3 passos):
+
+1. INSTALAR DEPENDÊNCIAS
+   ----------------------
+   Abra o Prompt de Comando e execute:
+   
+   pip install -r requirements.txt
+
+
+2. CONFIGURAR BANCO DE DADOS
+   --------------------------
+   Execute o script SQL no banco:
+   
+   mysql -h netquadras.com.br -P 3306 -u userbdtenis -p dbprodtenis < config/database.sql
+
+
+3. INICIAR SISTEMA COMPLETO
+   -------------------------
+   Clique duas vezes em:
+   
+   ✨ START_HERE.bat ✨
+
+
+================================================================================
+
+📋 OPÇÕES DISPONÍVEIS:
+
+Quando você clicar em START_HERE.bat, verá o menu:
+
+   [1] Iniciar TUDO (Monitoramento + Dashboard)    ⭐ RECOMENDADO
+   [2] Iniciar apenas Monitoramento
+   [3] Iniciar apenas Dashboard
+   [4] Testar conexão com banco de dados
+   [5] Sair
+
+
+🎯 OPÇÃO 1 - INICIAR TUDO (Recomendado):
+   
+   O que acontece:
+   ✅ Abre terminal 1: Monitoramento (recebe eventos do VIAWEB)
+   ✅ Abre terminal 2: Dashboard Web (servidor na porta 5000)
+   ✅ Abre navegador: http://localhost:5000 (visualização)
+   
+   Resultado:
+   - Sistema completo funcionando
+   - Dashboard atualizando em tempo real
+   - Eventos sendo gravados no banco
+
+
+🔧 OPÇÃO 2 - APENAS MONITORAMENTO:
+   
+   Executa:
+   python main.py
+   
+   Quando usar:
+   - Quando você NÃO precisa do dashboard web
+   - Para rodar em servidor sem interface
+   - Para rodar como serviço em background
+
+
+🌐 OPÇÃO 3 - APENAS DASHBOARD:
+   
+   Executa:
+   python run_dashboard.py
+   
+   Quando usar:
+   - Quando o monitoramento já está rodando em outro lugar
+   - Para visualizar dados já gravados no banco
+   - Para criar múltiplos dashboards
+
+
+🧪 OPÇÃO 4 - TESTAR CONEXÃO:
+   
+   Testa:
+   - Conexão com banco de dados
+   - Credenciais do .env
+   
+   Quando usar:
+   - Para verificar se está tudo configurado
+   - Para diagnosticar problemas de conexão
+
+
+================================================================================
+
+📁 ARQUIVOS IMPORTANTES:
+
+   START_HERE.bat       ⭐ CLIQUE AQUI para começar!
+   
+   main.py              - Monitoramento de eventos
+   run_dashboard.py     - Dashboard web
+   
+   .env                 - Configurações (senhas, IPs)
+   requirements.txt     - Dependências Python
+   
+   iniciar.bat          - Inicia apenas monitoramento
+   iniciar_dashboard.bat - Inicia apenas dashboard
+
+
+================================================================================
+
+🌐 ACESSANDO O DASHBOARD:
+
+   Depois de iniciar, acesse no navegador:
+   
+   Local:         http://localhost:5000
+   Rede local:    http://SEU_IP:5000
+   
+   Para descobrir seu IP:
+   ipconfig
+
+
+================================================================================
+
+🛑 PARANDO O SISTEMA:
+
+   - Pressione Ctrl+C em cada terminal aberto
+   - Ou simplesmente feche as janelas dos terminais
+
+
+================================================================================
+
+📊 O QUE VOCÊ VAI VER NO DASHBOARD:
+
+   ┌─────────────────────────────────────────┐
+   │ 🛡️ VIAWEB Receiver - Dashboard         │
+   └─────────────────────────────────────────┘
+   
+   ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+   │ Status       │ │ Eventos Hoje │ │ Última Hora  │
+   │ 🟢 ONLINE    │ │     150      │ │      25      │
+   └──────────────┘ └──────────────┘ └──────────────┘
+   
+   ┌─────────────────────────────────────────┐
+   │ 📊 Últimos Eventos                      │
+   │                                         │
+   │ ID | Data | ISEP | Código | Zona | ... │
+   │ ────────────────────────────────────────│
+   │ 15 | 10:30 | 0001 | 1411 | 52 | ...    │
+   │ 14 | 10:28 | 0001 | 1400 | 51 | ...    │
+   └─────────────────────────────────────────┘
+   
+   ✅ Atualização automática a cada 3 segundos!
+
+
+================================================================================
+
+❓ RESOLUÇÃO DE PROBLEMAS:
+
+   PROBLEMA: "pip não é reconhecido"
+   SOLUÇÃO: Instale o Python 3.8+ e marque "Add to PATH"
+   
+   PROBLEMA: "Erro ao conectar no banco"
+   SOLUÇÃO: Verifique .env e teste com OPÇÃO 4
+   
+   PROBLEMA: "Porta 5000 já está em uso"
+   SOLUÇÃO: Feche outros programas na porta 5000
+              ou edite run_dashboard.py e mude a porta
+   
+   PROBLEMA: "Dashboard não mostra eventos"
+   SOLUÇÃO: Certifique-se que main.py está rodando
+   
+   PROBLEMA: "Sistema travado"
+   SOLUÇÃO: O dashboard mostrará alerta amarelo
+              Verifique se o VIAWEB Receiver está enviando eventos
+
+
+================================================================================
+
+💡 DICAS:
+
+   1. Sempre use START_HERE.bat para início rápido
+   
+   2. Deixe os dois terminais abertos (não feche!)
+   
+   3. O dashboard atualiza sozinho (não precisa F5)
+   
+   4. Para monitoramento 24/7, configure como serviço Windows
+   
+   5. Mantenha o .env seguro (contém senhas!)
+
+
+================================================================================
+
+📞 SUPORTE:
+
+   Para dúvidas ou problemas:
+   SI Sistemas Inteligentes Eletrônicos
+
+
+================================================================================
+
+Criado em: 27/01/2026
+Versão: 1.0
+
+================================================================================

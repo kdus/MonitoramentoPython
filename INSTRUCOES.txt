@@ -1,0 +1,121 @@
+================================================================================
+  VIAWEB Receiver - Sistema de Monitoramento de Eventos (Python)
+  SI Sistemas Inteligentes Eletrônicos
+================================================================================
+
+INSTRUÇÕES DE INSTALAÇÃO E USO:
+
+1. INSTALAR DEPENDÊNCIAS
+   -----------------------
+   Abra o Prompt de Comando nesta pasta e execute:
+   
+   pip install -r requirements.txt
+
+
+2. CONFIGURAR BANCO DE DADOS
+   ---------------------------
+   a) Crie o banco de dados executando o script SQL:
+      mysql -h netquadras.com.br -P 3306 -u userbdtenis -p dbprodtenis < config/database.sql
+   
+   b) Ou importe manualmente o arquivo config/database.sql pelo phpMyAdmin
+
+
+3. CONFIGURAR CONEXÃO
+   -------------------
+   O arquivo .env já está criado com as configurações corretas.
+   Se precisar alterar, edite o arquivo .env
+
+
+4. INICIAR MONITORAMENTO
+   ----------------------
+   Opção 1: Clique duas vezes no arquivo iniciar.bat
+   
+   Opção 2: Execute via linha de comando:
+            python main.py
+
+
+5. VERIFICAR FUNCIONAMENTO
+   ------------------------
+   Após iniciar, você verá:
+   
+   [ViawebService] Conectando em 141.11.72.177:2700...
+   [ViawebService] Conectado com sucesso!
+   [DatabaseService] Conectado ao banco de dados dbprodtenis
+   [MonitoringController] ========================================
+   [MonitoringController] MONITORAMENTO ATIVO - AGUARDANDO EVENTOS
+   [MonitoringController] ========================================
+   
+   Quando um evento for recebido:
+   [MonitoringController] >>> EVENTO RECEBIDO <<<
+   [DatabaseService] ✓ Evento salvo no banco
+   [MonitoringController] >>> Evento processado. Continuando escuta... <<<
+
+
+6. ENCERRAR MONITORAMENTO
+   -----------------------
+   Pressione Ctrl+C para encerrar a aplicação
+
+
+7. MONITORAMENTO CONTÍNUO 24/7
+   ----------------------------
+   A aplicação foi desenvolvida para rodar continuamente:
+   
+   ✓ Reconexão automática em caso de queda
+   ✓ Loop infinito de escuta
+   ✓ Tratamento robusto de erros
+   ✓ Log de todas as operações no banco de dados
+   ✓ Resposta automática para todos os eventos
+
+
+8. CONSULTAR EVENTOS NO BANCO
+   ---------------------------
+   Use MySQL Workbench, phpMyAdmin ou linha de comando:
+   
+   -- Ver últimos eventos
+   SELECT * FROM eventos ORDER BY id DESC LIMIT 10;
+   
+   -- Ver eventos de hoje
+   SELECT * FROM eventos WHERE DATE(data_recepcao) = CURDATE();
+   
+   -- Ver log de conexões
+   SELECT * FROM conexoes_log ORDER BY id DESC LIMIT 10;
+   
+   -- Ver log de erros
+   SELECT * FROM erros_log ORDER BY id DESC LIMIT 10;
+
+
+9. SOLUÇÃO DE PROBLEMAS
+   ---------------------
+   
+   PROBLEMA: Erro ao conectar no banco de dados
+   SOLUÇÃO: Verifique as credenciais no arquivo .env
+   
+   PROBLEMA: Erro ao conectar no VIAWEB Receiver
+   SOLUÇÃO: Verifique se o IP e porta estão corretos no .env
+            Verifique se o VIAWEB Receiver está rodando
+   
+   PROBLEMA: Aplicação para após processar um evento
+   SOLUÇÃO: Este problema foi corrigido na versão atual.
+            Certifique-se de estar usando a versão mais recente.
+
+
+10. EXECUTAR COMO SERVIÇO (WINDOWS)
+    --------------------------------
+    Para rodar automaticamente ao iniciar o Windows:
+    
+    a) Instale o NSSM (Non-Sucking Service Manager)
+       Baixe em: https://nssm.cc/download
+    
+    b) Configure o serviço:
+       nssm install ViawebMonitoring "C:\Python\python.exe" "C:\caminho\para\main.py"
+    
+    c) Inicie o serviço:
+       nssm start ViawebMonitoring
+
+
+SUPORTE:
+--------
+Para suporte técnico, entre em contato com:
+SI Sistemas Inteligentes Eletrônicos
+
+================================================================================

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIAWEB Receiver - Dashboard de Monitoramento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .status-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card .label {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .status-online {
+            color: #10b981;
+        }
+
+        .status-offline {
+            color: #ef4444;
+        }
+
+        .status-warning {
+            color: #f59e0b;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .indicator-online {
+            background: #10b981;
+        }
+
+        .indicator-offline {
+            background: #ef4444;
+        }
+
+        .indicator-warning {
+            background: #f59e0b;
+        }
+
+        .eventos-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .eventos-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .auto-refresh {
+            font-size: 0.8em;
+            color: #10b981;
+            display: flex;
+            align-items: center;
+        }
+
+        .eventos-table {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table thead {
+            background: #667eea;
+            color: white;
+        }
+
+        table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+
+        table td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .badge-eth {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-gprs {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .timestamp {
+            text-align: right;
+            color: #999;
+            font-size: 0.85em;
+            margin-top: 20px;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .alert-warning {
+            background: #fef3c7;
+            color: #92400e;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .alert-danger {
+            background: #fee2e2;
+            color: #991b1b;
+            border-left: 4px solid #ef4444;
+        }
+
+        .alert-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🛡️ Netquadras - Eventos Viaweb - Dashboard</h1>
+            <p>Sistema de Monitoramento de Eventos em Tempo Real</p>
+        </div>
+
+        <!-- Alertas -->
+        <div id="alertas"></div>
+
+        <!-- Status Cards -->
+        <div class="status-cards">
+            <div class="card">
+                <h3>Status do Sistema</h3>
+                <div class="value" id="sistema-status">
+                    <span class="status-indicator"></span>
+                    <span>Carregando...</span>
+                </div>
+                <div class="label" id="sistema-label">Verificando conexão...</div>
+            </div>
+
+            <div class="card">
+                <h3>Eventos Hoje</h3>
+                <div class="value status-online" id="eventos-hoje">--</div>
+                <div class="label">Total de eventos recebidos hoje</div>
+            </div>
+
+            <div class="card">
+                <h3>Última Hora</h3>
+                <div class="value status-online" id="eventos-hora">--</div>
+                <div class="label">Eventos nos últimos 60 minutos</div>
+            </div>
+
+            <div class="card">
+                <h3>Último Evento</h3>
+                <div class="value status-online" id="tempo-ultimo">--</div>
+                <div class="label" id="tempo-ultimo-label">Aguardando dados...</div>
+            </div>
+        </div>
+
+        <!-- Eventos Section -->
+        <div class="eventos-section">
+            <h2>
+                📊 Últimos Eventos Recebidos
+                <span class="auto-refresh">
+                    <span class="status-indicator indicator-online"></span>
+                    Atualização automática a cada 3s
+                </span>
+            </h2>
+
+            <div class="eventos-table">
+                <table id="eventos-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Data/Hora</th>
+                            <th>ISEP</th>
+                            <th>Conta</th>
+                            <th>Código</th>
+                            <th>Zona</th>
+                            <th>Meio</th>
+                            <th>Equipamento</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventos-tbody">
+                        <tr>
+                            <td colspan="9" class="loading">
+                                <div class="spinner"></div>
+                                Carregando eventos...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="timestamp" id="last-update">
+                Última atualização: --
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuração
+        const API_URL = window.location.origin;
+        const REFRESH_INTERVAL = 3000; // 3 segundos
+
+        // Função para formatar data
+        function formatarData(dataStr) {
+            if (!dataStr) return '--';
+            const data = new Date(dataStr);
+            return data.toLocaleString('pt-BR');
+        }
+
+        // Função para formatar tempo decorrido
+        function formatarTempo(segundos) {
+            if (!segundos) return '--';
+            
+            if (segundos < 60) {
+                return Math.floor(segundos) + 's';
+            } else if (segundos < 3600) {
+                return Math.floor(segundos / 60) + 'min';
+            } else {
+                return Math.floor(segundos / 3600) + 'h';
+            }
+        }
+
+        // Atualizar status do sistema
+        async function atualizarStatus() {
+            try {
+                const response = await fetch(`${API_URL}/api/status`);
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    const statusEl = document.getElementById('sistema-status');
+                    const labelEl = document.getElementById('sistema-label');
+                    const alertasEl = document.getElementById('alertas');
+
+                    // Limpa alertas
+                    alertasEl.innerHTML = '';
+
+                    // Status do sistema
+                    if (data.sistema_online && !data.travado) {
+                        statusEl.innerHTML = '<span class="status-indicator indicator-online"></span><span class="status-online">ONLINE</span>';
+                        labelEl.textContent = 'Sistema operando normalmente';
+                    } else if (data.sistema_online && data.travado) {
+                        statusEl.innerHTML = '<span class="status-indicator indicator-warning"></span><span class="status-warning">ALERTA</span>';
+                        labelEl.textContent = 'Sistema conectado mas sem eventos';
+                        alertasEl.innerHTML = `
+                            <div class="alert alert-warning">
+                                <span class="alert-icon">⚠️</span>
+                                <div>
+                                    <strong>Sistema Travado!</strong><br>
+                                    Não há eventos há ${formatarTempo(data.tempo_sem_evento)}. Verifique a conexão.
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        statusEl.innerHTML = '<span class="status-indicator indicator-offline"></span><span class="status-offline">OFFLINE</span>';
+                        labelEl.textContent = 'Sistema desconectado';
+                        alertasEl.innerHTML = `
+                            <div class="alert alert-danger">
+                                <span class="alert-icon">❌</span>
+                                <div>
+                                    <strong>Sistema Offline!</strong><br>
+                                    O monitoramento não está ativo. Inicie o main.py.
+                                </div>
+                            </div>
+                        `;
+                    }
+
+                    // Eventos hoje
+                    document.getElementById('eventos-hoje').textContent = data.eventos_hoje;
+
+                    // Eventos última hora
+                    document.getElementById('eventos-hora').textContent = data.eventos_ultima_hora;
+
+                    // Tempo desde último evento
+                    if (data.tempo_sem_evento !== null) {
+                        document.getElementById('tempo-ultimo').textContent = formatarTempo(data.tempo_sem_evento);
+                        document.getElementById('tempo-ultimo-label').textContent = 'tempo desde o último evento';
+                    }
+                }
+            } catch (error) {
+                console.error('Erro ao atualizar status:', error);
+                document.getElementById('alertas').innerHTML = `
+                    <div class="alert alert-danger">
+                        <span class="alert-icon">❌</span>
+                        <div>
+                            <strong>Erro de Conexão!</strong><br>
+                            Não foi possível conectar ao servidor. Verifique se web_server.py está rodando.
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Atualizar eventos
+        async function atualizarEventos() {
+            try {
+                const response = await fetch(`${API_URL}/api/eventos?limit=50`);
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    const tbody = document.getElementById('eventos-tbody');
+                    tbody.innerHTML = '';
+
+                    if (data.eventos.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="9" class="loading">Nenhum evento registrado ainda</td></tr>';
+                        return;
+                    }
+
+                    data.eventos.forEach(evento => {
+                        const tr = document.createElement('tr');
+                        
+                        const meioClass = evento.meio_comunicacao === 'ETH' ? 'badge-eth' : 'badge-gprs';
+                        
+                        tr.innerHTML = `
+                            <td><strong>${evento.id}</strong></td>
+                            <td>${formatarData(evento.data_recepcao)}</td>
+                            <td>${evento.id_isep || '--'}</td>
+                            <td>${evento.conta_isep || '--'}</td>
+                            <td><strong>${evento.codigo_evento || '--'}</strong></td>
+                            <td>${evento.usuario_zona || '--'}</td>
+                            <td><span class="badge ${meioClass}">${evento.meio_comunicacao || '--'}</span></td>
+                            <td>${evento.equipamento || '--'}</td>
+                            <td>${evento.descricao || '--'}</td>
+                        `;
+                        
+                        tbody.appendChild(tr);
+                    });
+
+                    // Atualiza timestamp
+                    document.getElementById('last-update').textContent = 
+                        `Última atualização: ${new Date().toLocaleTimeString('pt-BR')}`;
+                }
+            } catch (error) {
+                console.error('Erro ao atualizar eventos:', error);
+            }
+        }
+
+        // Atualizar tudo
+        function atualizarDashboard() {
+            atualizarStatus();
+            atualizarEventos();
+        }
+
+        // Iniciar atualizações automáticas
+        atualizarDashboard();
+        setInterval(atualizarDashboard, REFRESH_INTERVAL);
+
+        console.log('🚀 Dashboard VIAWEB Receiver iniciado');
+        console.log(`📡 Atualizando a cada ${REFRESH_INTERVAL/1000} segundos`);
+    </script>
+</body>
+</html>
