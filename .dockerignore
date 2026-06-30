@@ -1,0 +1,13 @@
+.git
+.gitignore
+venv
+__pycache__
+*.pyc
+*.bat
+*.xml
+logs/*.log
+README.md
+DASHBOARD_README.md
+INSTRUCOES.txt
+COMO_USAR.txt
+arquitetura.md
