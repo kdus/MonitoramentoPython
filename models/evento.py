@@ -10,6 +10,8 @@
 from datetime import datetime
 from typing import Optional, Dict, Any
 
+from services.time_service import now_local
+
 
 class Evento:
     """Model que representa um evento recebido do VIAWEB Receiver"""
@@ -115,7 +117,7 @@ class Evento:
             usuario_zona_str = None
         
         return Evento(
-            data_recepcao=datetime.now(),
+            data_recepcao=now_local(),  # data/hora local do servidor (APP_TIMEZONE)
             data_evento=data_evento,
             id_isep=json_data.get('isep'),  # Mapeamento correto: isep
             conta_isep=json_data.get('contaCliente'),  # Mapeamento correto: contaCliente

@@ -7,9 +7,18 @@
 FROM python:3.11-slim
 
 # Logs sem buffer (aparecem em tempo real no `docker logs`) e sem .pyc
+# TZ define o fuso do relogio do container (afeta datetime.now()).
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    TZ=America/Sao_Paulo
+    TZ=America/Sao_Paulo \
+    APP_TIMEZONE=America/Sao_Paulo
+
+# tzdata: necessario para o fuso horario local funcionar (datetime/zoneinfo)
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends tzdata \
+    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+    && echo $TZ > /etc/timezone \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
